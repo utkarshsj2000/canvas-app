@@ -1,0 +1,658 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Canvas App</title>
+    <script type="text/javascript">
+      
+      
+            var a1=0;
+            var b1=0;
+            var a2=360;
+            var b2=450;
+            
+        function face()
+        {
+            var c = document.getElementById("shape1");
+            var ctx = c.getContext("2d");
+
+            ctx.clearRect(a1,b1,a2,b2);
+            //left ear
+            ctx.beginPath();
+            ctx.arc(55,150,30,0,2*Math.PI);
+            ctx.fillStyle = "Red";
+            ctx.fill();
+            ctx.stroke();
+            ctx.closePath();
+
+            //right ear
+            ctx.beginPath();
+            ctx.arc(305,150,30,0,2*Math.PI);
+            ctx.fillStyle = "Red";
+            ctx.fill();
+            ctx.stroke();
+            ctx.closePath();
+
+            //bigface
+            ctx.beginPath();
+            ctx.arc(180,210,120,0,2*Math.PI);
+            ctx.fillStyle = "yellow";
+            ctx.fill();
+            ctx.stroke();
+            ctx.closePath();
+
+
+            //left eye
+            ctx.beginPath();
+            ctx.arc(130,160,30,0,2*Math.PI);
+            ctx.fillStyle = "white";
+            ctx.fill();
+            ctx.stroke();
+            ctx.closePath();
+
+            //right eye inside
+            ctx.beginPath();
+            ctx.arc(130,170,15,0,2*Math.PI);
+            ctx.fillStyle = "black";
+            ctx.fill();
+            ctx.stroke();
+            ctx.closePath();
+
+            //right eye
+            ctx.beginPath();
+            ctx.arc(230,160,30,0,2*Math.PI);
+            ctx.fillStyle = "white";
+            ctx.fill();
+            ctx.stroke();
+            ctx.closePath();
+
+            //right eye inside
+            ctx.beginPath();
+            ctx.arc(230,170,15,0,2*Math.PI);
+            ctx.fillStyle = "black";
+            ctx.fill();
+            ctx.stroke();
+            ctx.closePath();
+
+            //nose
+            ctx.beginPath();
+            ctx.arc(180,230,20,0,2*Math.PI);
+            ctx.fillStyle = "pink";
+            ctx.fill();
+            ctx.stroke();
+            ctx.closePath();
+
+            //lips
+            ctx.beginPath();
+            ctx.arc(180,220,80,0,Math.PI);
+            ctx.stroke();
+            ctx.closePath();
+
+            //alert("I am a Face");
+        }
+        function tri()
+        {
+            var a = document.getElementById("shape1");
+            var x = a.getContext("2d");
+
+            x.clearRect(a1,b1,a2,b2);
+            //left line
+            x.beginPath();
+            x.moveTo(100,150);
+            x.lineTo(150,250);
+            x.stroke();
+            x.closePath();
+
+            //right line
+            x.beginPath();
+            x.moveTo(200,150);
+            x.lineTo(150,250);
+            x.stroke();
+            x.closePath();
+
+            //top line
+            x.beginPath();
+            x.moveTo(100,150);
+            x.lineTo(200,150);
+            x.stroke();
+            x.closePath();
+        }
+        function hut()
+        {
+            var a = document.getElementById("shape1");
+            var x = a.getContext("2d");
+
+            x.clearRect(a1,b1,a2,b2);
+            //left line
+            x.beginPath();
+            x.moveTo(100,150);
+            x.lineTo(50,250);
+            x.stroke();
+            x.closePath();
+
+            //right line
+            x.beginPath();
+            x.moveTo(100,150);
+            x.lineTo(150,250);
+            x.stroke();
+            x.closePath();
+
+            //mid line
+            x.beginPath();
+            x.moveTo(50,250);
+            x.lineTo(300,250);
+            x.stroke();
+            x.closePath();
+
+
+            //top line of roof 
+            x.beginPath();
+            x.moveTo(100,150);
+            x.lineTo(250,150);
+            x.stroke();
+            x.closePath();
+
+            //back line from roof
+            x.beginPath();
+            x.moveTo(250,150);
+            x.lineTo(300,250);
+            x.stroke();
+            x.closePath();
+
+            //down line back
+            x.beginPath();
+            x.moveTo(300,250);
+            x.lineTo(300,350);
+            x.stroke();
+            x.closePath();
+            
+            //down line mid
+            x.beginPath();
+            x.moveTo(150,250);
+            x.lineTo(150,350);
+            x.stroke();
+            x.closePath();
+
+            //down line front
+            x.beginPath();
+            x.moveTo(50,250);
+            x.lineTo(50,350);
+            x.stroke();
+            x.closePath();
+
+            //bottom line
+            x.beginPath();
+            x.moveTo(50,350);
+            x.lineTo(300,350);
+            x.stroke();
+            x.closePath();
+        }
+        function kite()
+        {
+            var a = document.getElementById("shape1");
+            var x = a.getContext("2d");
+
+            x.clearRect(a1,b1,a2,b2);
+            //left line top
+            x.beginPath();
+            x.moveTo(250,50);
+            x.lineTo(180,150);
+            x.stroke();
+            x.closePath();
+
+            //right line bottom
+            x.beginPath();
+            x.moveTo(250,50);
+            x.lineTo(320,150);
+            x.stroke();
+            x.closePath();
+
+            //vertical line
+            x.beginPath();
+            x.moveTo(250,50);
+            x.lineTo(250,250);
+            x.stroke();
+            x.closePath();
+
+
+             //left line bottom
+            x.beginPath();
+            x.moveTo(180,150);
+            x.lineTo(250,250);
+            x.stroke();
+            x.closePath();
+
+            //right line bottom
+            x.beginPath();
+            x.moveTo(320,150);
+            x.lineTo(250,250);
+            x.stroke();
+            x.closePath();
+
+            //horizontal line
+            x.beginPath();
+            x.moveTo(180,150);
+            x.lineTo(320,150);
+            x.stroke();
+            x.closePath();
+
+            //circle arc
+            x.beginPath();
+            x.arc(250,150,70,0,Math.PI);
+            x.
+            x.stroke();
+            x.closePath();
+        }
+        function car()
+        {
+           var a = document.getElementById("shape1");
+            var x = a.getContext("2d");
+
+            x.clearRect(a1,b1,a2,b2);
+            //front glass of car
+            x.beginPath();
+            x.moveTo(100,150);
+            x.lineTo(50,200);
+            x.stroke();
+            x.closePath();
+
+            //top line of roof 
+            x.beginPath();
+            x.moveTo(100,150);
+            x.lineTo(250,150);
+            x.stroke();
+            x.closePath();
+
+            //back glass of car
+            x.beginPath();
+            x.moveTo(250,150);
+            x.lineTo(300,200);
+            x.stroke();
+            x.closePath();
+
+            //down line back
+            x.beginPath();
+            x.moveTo(350,220);
+            x.lineTo(350,270);
+            x.stroke();
+            x.closePath();
+
+            //down line front
+            x.beginPath();
+            x.moveTo(10,220);
+            x.lineTo(10,270);
+            x.stroke();
+            x.closePath();
+
+            //bottom line
+            x.beginPath();
+            x.moveTo(10,270);
+            x.lineTo(350,270);
+            x.stroke();
+            x.closePath();
+            
+            //bonnot
+            x.beginPath();
+            x.moveTo(10,220);
+            x.lineTo(50,200);
+            x.stroke();
+            x.closePath();
+
+            //bonnot back
+            x.beginPath();
+            x.moveTo(300,200);
+            x.lineTo(350,220);
+            x.stroke();
+            x.closePath();
+
+            //front tyre
+            x.beginPath();
+            x.arc(80,270,30,0,2*Math.PI);
+            x.fillStyle = "Red";
+            x.fill();
+            x.stroke();
+            x.closePath();
+
+             //back tyre
+            x.beginPath();
+            x.arc(280,270,30,0,2*Math.PI);
+            x.fillStyle = "Red";
+            x.fill();
+            x.stroke();
+            x.closePath();
+        }
+        function icecream()
+        {
+            var a = document.getElementById("shape1");
+            var x = a.getContext("2d");
+
+            x.clearRect(a1,b1,a2,b2);
+            //left line bottom
+            x.beginPath();
+            x.moveTo(120,150);
+            x.lineTo(190,300);
+            x.stroke();
+            x.closePath();
+
+            //right line bottom
+            x.beginPath();
+            x.moveTo(260,150);
+            x.lineTo(190,300);
+            x.stroke();
+            x.closePath();
+
+            //horizontal line
+            x.beginPath();
+            x.moveTo(120,150);
+            x.lineTo(260,150);
+            x.stroke();
+            x.closePath();
+
+            //scoop of icecream
+            x.beginPath();
+            x.arc(190,150,70,3.14,2*Math.PI);
+            x.fillStyle = "orange";
+            x.fill();
+            x.stroke();
+            x.closePath();
+
+            //cherry on icecream
+            x.beginPath();
+            x.arc(185,70,10,0,2*Math.PI);
+            x.fillStyle = "Red";
+            x.fill();
+            x.stroke();
+            x.closePath();
+        }
+        function cube()
+        {
+            var a = document.getElementById("shape1");
+            var x = a.getContext("2d");
+
+            x.clearRect(a1,b1,a2,b2);
+            //back sqaure
+            x.beginPath();
+            x.rect(80,80,150,150);
+            x.stroke();
+            x.closePath();
+
+            //front sqaure
+            x.beginPath();
+            x.rect(140,140,160,160);
+            x.stroke();
+            x.closePath();
+
+            //right line top
+            x.beginPath();
+            x.moveTo(230,80);
+            x.lineTo(300,140);
+            x.stroke();
+            x.closePath();
+
+            //left line top
+            x.beginPath();
+            x.moveTo(80,80);
+            x.lineTo(140,140);
+            x.stroke();
+            x.closePath();
+
+            //left line bottom
+            x.beginPath();
+            x.moveTo(80,230);
+            x.lineTo(140,300);
+            x.stroke();
+            x.closePath();
+
+            //right line bottom
+            x.beginPath();
+            x.moveTo(230,230);
+            x.lineTo(300,300);
+            x.stroke();
+            x.closePath();
+        }
+        function snowman()
+        {
+            var a = document.getElementById("shape1");
+            var x = a.getContext("2d");
+
+            x.clearRect(a1,b1,a2,b2);
+            //face
+            x.beginPath();
+            x.arc(180,120,40,0,2*Math.PI);
+            x.stroke();
+            x.closePath();
+
+            //left eye
+            x.beginPath();
+            x.arc(160,110,8,0,2*Math.PI);
+            x.fillStyle = "black";
+            x.fill();
+            x.stroke();
+            x.closePath();
+
+            //right eye
+            x.beginPath();
+            x.arc(200,110,8,0,2*Math.PI);
+            x.fillStyle = "black";
+            x.fill();
+            x.stroke();
+            x.closePath();
+
+
+            //body
+            x.beginPath();
+            x.arc(180,220,60,0,2*Math.PI);
+            x.stroke();
+            x.closePath();
+
+             //buttons1
+            x.beginPath();
+            x.arc(180,180,4,0,2*Math.PI);
+            x.fillStyle = "black";
+            x.fill();
+            x.stroke();
+            x.closePath();
+
+             //buttons2
+            x.beginPath();
+            x.arc(180,210,4,0,2*Math.PI);
+            x.fillStyle = "black";
+            x.fill();
+            x.stroke();
+            x.closePath();
+
+            //buttons3
+            x.beginPath();
+            x.arc(180,240,4,0,2*Math.PI);
+            x.fillStyle = "black";
+            x.fill();
+            x.stroke();
+            x.closePath();
+
+            //buttons4
+            x.beginPath();
+            x.arc(180,270,4,0,2*Math.PI);
+            x.fillStyle = "black";
+            x.fill();
+            x.stroke();
+            x.closePath();
+
+            //leg
+            x.beginPath();
+            x.arc(180,360,80,0,2*Math.PI);
+            x.stroke();
+            x.closePath();
+
+             //buttons5
+            x.beginPath();
+            x.arc(180,300,4,0,2*Math.PI);
+            x.fillStyle = "black";
+            x.fill();
+            x.stroke();
+            x.closePath();
+
+             //buttons6
+            x.beginPath();
+            x.arc(180,330,4,0,2*Math.PI);
+            x.fillStyle = "black";
+            x.fill();
+            x.stroke();
+            x.closePath();
+
+            //buttons7
+            x.beginPath();
+            x.arc(180,360,4,0,2*Math.PI);
+            x.fillStyle = "black";
+            x.fill();
+            x.stroke();
+            x.closePath();
+
+            //buttons8
+            x.beginPath();
+            x.arc(180,390,4,0,2*Math.PI);
+            x.fillStyle = "black";
+            x.fill();
+            x.stroke();
+            x.closePath();
+
+            //buttons9
+            x.beginPath();
+            x.arc(180,420,4,0,2*Math.PI);
+            x.fillStyle = "black";
+            x.fill();
+            x.stroke();
+            x.closePath();
+        }
+// color background
+
+
+        function red()
+        {
+            var x=document.getElementById("shape1");
+            var y=x.getContext("2d");
+            
+
+            y.clearRect(a1,b1,a2,b2);
+            y.fillStyle="Red";
+            y.fillRect(a1,b1,a2,b2);
+        }function pink()
+        {
+            var x=document.getElementById("shape1");
+            var y=x.getContext("2d");
+
+            y.clearRect(a1,b1,a2,b2);
+
+            y.fillStyle="Pink";
+            y.fillRect(a1,b1,a2,b2);
+        }function yellow()
+        {
+            var x=document.getElementById("shape1");
+            var y=x.getContext("2d");
+
+            y.clearRect(a1,b1,a2,b2);
+
+            y.fillStyle="Yellow";
+            y.fillRect(a1,b1,a2,b2);
+        }function green()
+        {
+            var x=document.getElementById("shape1");
+            var y=x.getContext("2d");
+
+            y.clearRect(a1,b1,a2,b2);
+
+            y.fillStyle="Green";
+            y.fillRect(a1,b1,a2,b2);
+        }function blue()
+        {
+            var x=document.getElementById("shape1");
+            var y=x.getContext("2d");
+
+            y.clearRect(a1,b1,a2,b2);
+
+            y.fillStyle="Blue";
+            y.fillRect(a1,b1,a2,b2);
+        }function orange()
+        {
+            var x=document.getElementById("shape1");
+            var y=x.getContext("2d");
+
+            y.clearRect(a1,b1,a2,b2);
+
+            y.fillStyle="Orange";
+            y.fillRect(a1,b1,a2,b2);
+        }function brown()
+        {
+            var x=document.getElementById("shape1");
+            var y=x.getContext("2d");
+
+            y.clearRect(a1,b1,a2,b2);
+
+            y.fillStyle="Brown";
+            y.fillRect(a1,b1,a2,b2);
+        }function grey()
+        {
+            var x=document.getElementById("shape1");
+            var y=x.getContext("2d");
+
+            y.clearRect(a1,b1,a2,b2);
+            
+            y.fillStyle="Grey";
+            y.fillRect(a1,b1,a2,b2);
+        }
+    </script>
+  
+</head>
+<body>
+    
+    <div class="container-fluid">
+        <div class="row">
+                <div class="header col-md-3 col-lg-12">
+                   <h1 class="text-center text-uppercase"> Canvas App</h1>
+                </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-lg-12">
+                <canvas id="shape1" width="360" height="450">
+                </canvas>
+            </div>
+        </div>
+        <div class="row">
+            <div class="colpal col-md-3 col-lg-12">
+                <button class="btn " style="background-color: pink;" onclick="pink();">Pink</button>
+                <button class="btn " style="background-color: yellow;" onclick="yellow();">Yellow</button>
+                <button class="btn " style="background-color: green;" onclick="green();">Green</button>
+                <button class="btn " style="background-color: blue;"onclick="blue();">Blue</button>
+                <button class="btn " style="background-color: orange;" onclick="orange();">Orange</button>
+                <button class="btn " style="background-color: brown;" onclick="brown();">Brown</button>
+                <button class="btn " style="background-color: grey;" onclick="grey();">Grey</button>
+                <button class="btn " style="background-color: red; "  onclick="red();">Red</button>
+            
+            </div>
+        </div>
+        <div class="row shppal">
+            <div class=" col-md-2 col-lg-12">
+                    <button class="btn btn-light " onClick="face();" >Face</button>
+                    <button class="btn btn-light " value="Hut" onClick="hut();">Hut</button>
+                    <button class="btn btn-light " value="Triangle" onClick="tri();">Triangle</button>
+                    <button class="btn btn-light " value="Snow Man" onClick="snowman();">Snowman</button>
+                    <button class="btn btn-light " value="Kite" onClick="kite();">Kite</button>
+                    <button class="btn btn-light " value="Car" onClick="car();">Car</button>
+                    <button class="btn btn-light " value="Cube" onClick="cube();">Cube</button>
+                    <button class="btn btn-light " value="IceCream" onClick="icecream();">Ice cream</button>
+            </div>
+            <div class="col-md-3 col-lg-12">
+                    <button class="btn btn-light " value="Reset" onClick="location.reload();">Reset</button>
+            </div>
+         </div>
+        <div class="row">
+            <div class="footer">
+                   &copy; | Developed By <a href="http://utkarshshekharjaiswal.tk" target="_new">Utkarsh Shekhar Jaiswal</a> | All Rights Reserved
+            </div>
+        </div> 
+    </div>
+
+</body>
+</html>
